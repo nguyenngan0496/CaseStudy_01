@@ -172,7 +172,7 @@ nav ul li:hover a {
     position: relative;
     display: grid;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 70px auto;
     grid-template-areas:
     "h1 h1"
     "icon text"
@@ -187,6 +187,9 @@ nav ul li:hover a {
     margin:0;
 }
 
+.features-text p {
+    display: inline-block;
+}
 .f1 {
     width: 300px;
     position: absolute;
@@ -197,14 +200,14 @@ nav ul li:hover a {
 .f2 {
     width:300px;
     position: absolute;
-    top: 120px;
+    top: 200px;
     left:750px
 }
 
 .f3 {
     width:300px;
     position: absolute;
-    top: 380px;
+    top: 440px;
     left:700px
 }
 
@@ -217,6 +220,25 @@ nav ul li:hover a {
 
 .features-desc:hover {
     color: #B54871;
-    transition: 0.2s;
+    font-weight: bolder;
+    
+}
+
+.features-desc:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #101186;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+.features-desc:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  
 }
 /* features */
