@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoyofest Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Podkova&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- banner -->
+    <section id="banner">
+        <img src="./src/logo.png" alt="Banner" class="logo">
+        <div class="banner-text">
+            <h1>HOYOFEST Shop</h1>
+            <p>Shopping your Genshin goods</p>
+            <div class="banner-btn">
+                <a href="#"><div></div>Find Out</a>
+                <a href="#"><div></div>Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+
+    <!-- sidenav -->
+    <section id="sideNav">
+        <Nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Testimonial</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </Nav>
+    </section>
+    <div id="menubtn">
+        <img src="./src/menu-btn.webp" alt="Menu">
+    </div>
+    <!-- end sidenav -->
+    
+    <!-- features -->
+     <section id="feature">
+        <div class="title-text">
+            <p>Features</p>
+            <h1>Why choose us</h1>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-img">
+                <img src="./src/ftimg.png" alt="Feature">
+            </div>
+
+            <div class="features">
+                
+                <div class="features-desc f1">
+                    <h1>Reasonable Price</h1>
+                    <div class="features-icon">
+                        <i class="bi bi-bookmark-star-fill"></i>
+                    </div>
+                    <div class="features-text">
+                        <p>A fair and reasonable price is the price point for a good or service that is fair to both parties involved in the transaction. This amount is based upon the agreed-upon conditions, promised quality and timeliness of contract performance.</p>
+                    </div>
+                </div>
+
+                
+                <div class="features-desc f2">
+                    <h1>Fast Shipping</h1>
+                    <div class="features-icon">
+                        <i class="bi bi-bookmark-star-fill"></i>
+                    </div>
+                    <div class="features-text">
+                        <p>Expedited shipping is a delivery option that promises faster shipping speeds compared to standard shipping options. Trucks with expedited goods travel from order pickup to delivery with no stops in between to fulfill expedited shipping demands.</p>
+                    </div>
+                </div>
+
+                
+                <div class="features-desc f3">
+                    <h1>Rapid Restock</h1>
+                    <div class="features-icon">
+                        <i class="bi bi-bookmark-star-fill"></i>
+                    </div>
+                    <div class="features-text">
+                        <p>To restock a lake means to put more fish in it because there are very few left. The lake was restocked with roach last year.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section> 
+    <!-- end features -->
+
+
+
+    <script>
+        var menubtn = document.getElementById("menubtn");
+        var sideNav = document.getElementById("sideNav");
+        var menu = document.getElementById("menu");
+        sideNav.style.right = "-250px";
+        menubtn.onclick = function(){
+            if(sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "./src/menu-btn.webp";
+            }else{
+                sideNav.style.right ="-250px";
+                menu.src = "./src/menu-btn.webp"
+            }
+        }
+    </script>
+    
+</body>
+</html>

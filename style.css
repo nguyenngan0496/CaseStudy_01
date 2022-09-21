@@ -1,0 +1,222 @@
+body, head {
+    margin:0;
+    padding:0;
+    font-family: 'podkova';
+}
+
+/* banner */
+#banner {
+    background: linear-gradient(rgba(255, 255, 255, 0.023),rgba(255, 255, 255, 0.3), #E3CBE2), url(./src/banner.jpg);
+    background-size:100%;
+    height: 120vh
+    ;
+}
+
+.logo {
+    width: 100px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.banner-text {
+    text-align: center;
+    color: #101186;
+    padding-top: 180px;
+}
+
+.banner-text p {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+}
+.banner-text h1 {
+    font-size: 80px;
+    animation-name: changeColor ;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+
+}
+@keyframes changeColor {
+    0% {
+        color: #ffffff;
+    }
+    50% {
+        color: #B54871;
+    }
+    100% {
+        color: #101186;
+    }
+}
+
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    margin: 70px auto 0
+}
+
+.banner-btn a {
+    position: relative;
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin:20px 10px;
+    padding: 12px 0;
+    color: #101186;
+    border: 1px solid #101186;
+    z-index: 1;
+}
+
+.banner-btn a div {
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    top:0;
+    left:0;
+    position:absolute;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover {
+    color: white;
+}
+
+.banner-btn a:hover div {
+    width: 100%;
+    height: 100%;
+    background:#B54871;
+}
+/* end sidenav */
+
+/* sidenav */
+#sideNav {
+    width:250px;
+    height:100vh;
+    position: fixed;
+    top:0;
+    right: -250px;
+    background: #DFC63C;
+    z-index: 2;
+    transition: right 0.5s;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 50px 20px
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#101186;
+    font-size: 20px;
+}
+
+nav ul li:hover a {
+    font-size: 30px;
+}
+
+#menubtn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menubtn img {
+    width: 50px;
+}
+/* end sidenav */
+
+/* feature */
+#feature {
+
+    position: relative;
+    margin:0;
+    padding:5px;
+    background-color:#E3CBE2 ;
+    text-align:center ;
+}
+
+.title-text p {
+    text-align:center ;
+    color: white;
+    font-size: 50px;
+}
+
+.title-text h1 {
+    color: white;
+    margin-top: -30px;
+    font-size: 20px;
+}
+
+.feature-box {
+    width: 300px;
+    text-align: left;
+}
+
+.feature-img {
+    width: 500px;
+    margin-left: 250px;
+    margin-top:-50px
+}
+
+.features-desc {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+    "h1 h1"
+    "icon text"
+}
+
+.features-desc h1 {
+    grid-area:h1;
+    font-size: 30px;
+}
+.features-text {
+    grid-area:text;
+    margin:0;
+}
+
+.f1 {
+    width: 300px;
+    position: absolute;
+    top:200px;
+    left: 220px;
+}
+
+.f2 {
+    width:300px;
+    position: absolute;
+    top: 120px;
+    left:750px
+}
+
+.f3 {
+    width:300px;
+    position: absolute;
+    top: 380px;
+    left:700px
+}
+
+.features-icon .bi {
+    position: absolute;
+    top:50px;
+    color: #B54871;
+    grid-area:icon;
+} 
+
+.features-desc:hover {
+    color: #B54871;
+    transition: 0.2s;
+}
+/* features */
