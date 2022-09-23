@@ -10,10 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Podkova&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- banner -->
-    <section id="banner">
+    <section id="banner" class="col-md-12 col-12 col-sm-12">
         <img src="./src/logo.png" alt="Banner" class="logo">
         <div class="banner-text">
             <h1>HOYOFEST Shop</h1>
@@ -27,14 +29,14 @@
     <!-- end banner -->
 
     <!-- sidenav -->
-    <section id="sideNav">
+    <section id="sideNav" class="col-md-3 col-12 col-sm-12">
         <Nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Feature</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#feature">Feature</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </Nav>
     </section>
@@ -44,7 +46,7 @@
     <!-- end sidenav -->
     
     <!-- features -->
-     <section id="feature">
+     <section id="feature" class="col-md-12 col-12 col-sm-12">
         <div class="title-text">
             <p>☆*:.｡Features｡.:*☆</p>
             <h1>Why choose us</h1>
@@ -96,7 +98,7 @@
     <!-- end features -->
 
     <!-- service -->
-    <section id="service">
+    <section id="service" class="col-md-12 col-12 col-sm-12">
         <div class="title-text">
             <p>☆*:.｡Services｡.:*☆</p>
             <h1>We have all services you need</h1>
@@ -154,12 +156,12 @@
         </div>
 
         <div class="feedback-row">
-            <div class="feedback-col">
+            <div class="feedback-col"  class="col-md-12 col-12 col-sm-12">
                 <div class="user">
                     <img src="./src/user1.jpg" alt="user1">
                     <div class="user-info">
-                        <h4>Kaedehara Kazuha<i class="bi bi-facebook"></i></h4>
-                        <small>@KaedeharaKazuha</small>
+                        <h4>Kazuha<i class="bi bi-facebook"></i></h4>
+                        <small>@Kazuha</small>
                     </div>
                 </div>
                 <P>Kaedehara Kazuha is one of the major playable characters from the 2020 game Genshin Impact and a major protagonist in Chapter II of the Archon Quests.</P>
@@ -190,6 +192,36 @@
     </section>
     <!-- end feedback -->
 
+    <!-- contact -->
+    <section id="footer">
+        <img src="./src/footer.png" alt="Footer">
+        <div class="title-text">
+            <p>☆*:.｡Contact｡.:*☆</p>
+            <h1>Visit us today</h1>
+        </div>
+
+        <div class="footer-row">
+            <div class="footer-left"  class="col-md-12 col-12 col-sm-12">
+                <h1>Opening Hours</h1>
+                <p><i class="bi bi-clock"></i> Monday to Friday - 9AM to 9PM</p>
+                <p><i class="bi bi-clock"></i> Saturday to Sunday - 9AM to 12PM</p>
+            </div>
+            <div class="footer-right"  class="col-md-12 col-12 col-sm-12">
+                <h1>Get in touch 24/7</h1>
+                <p></i>Number 29, X Street, Y City, Z <i class="bi bi-geo-alt-fill"></i></p>
+                <p></i>HyofestShop@info.shop <i class="bi bi-envelope-fill"></i></p>
+                <p>+84 4444 44444 <i class="bi bi-telephone-fill"></i></p>
+            </div>
+        </div>
+        <div class="social-link">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <p>Copyright © COGNOSPHERE. All Rights Reserved.</p>
+        </div>
+    </section>
+    <!-- end contact -->
 
     <script>
         var menubtn = document.getElementById("menubtn");
@@ -205,6 +237,12 @@
                 menu.src = "./src/menu-btn.webp"
             }
         }
+
+    // All animations will take exactly 500ms
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	    speed: 500,
+	    speedAsDuration: true
+        });
     </script>
     
 </body>
